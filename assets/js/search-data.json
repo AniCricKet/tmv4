@@ -40,6 +40,14 @@
   
 
   
+      ,"page5": {
+          "title": "Number Guesser",
+          "content": "&lt;!DOCTYPE html&gt; . Guess the Number . Guess the Number . Try to guess the number between 1 and 100. . Submit . .",
+          "url": "https://anicricket.github.io/tmv4/_pages/numbergueser.html",
+          "relUrl": "/_pages/numbergueser.html",
+          "date": ""
+      }
+      
   
 
   
@@ -58,7 +66,10 @@
   
 
   
-      ,"page11": {
+  
+
+  
+      ,"page12": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://anicricket.github.io/tmv4/robots.txt",
