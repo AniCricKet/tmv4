@@ -4,7 +4,6 @@ layout: default
 description: 
 ---
 
-<!DOCTYPE html>
 <html>
   <head>
     <title>Guess the Number</title>
