@@ -128,6 +128,25 @@
   
 
   
+      ,"page6": {
+          "title": "Number Guesser v1",
+          "content": "&lt;!DOCTYPE html&gt; . Guess the Number . Guess the Number . Try to guess the number between 1 and 100. . Submit . .",
+          "url": "https://anicricket.github.io/tmv4/_pages/numberguesser_v1.html",
+          "relUrl": "/_pages/numberguesser_v1.html",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page7": {
+          "title": "Number Guesser v2",
+          "content": "Guess the Number . Guess the Number . Try to guess the number between 1 and 100. . Submit . .",
+          "url": "https://anicricket.github.io/tmv4/_pages/numberguesser_v2.html",
+          "relUrl": "/_pages/numberguesser_v2.html",
+          "date": ""
+      }
+      
   
 
   
@@ -146,7 +165,10 @@
   
 
   
-      ,"page12": {
+  
+
+  
+      ,"page14": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://anicricket.github.io/tmv4/robots.txt",
