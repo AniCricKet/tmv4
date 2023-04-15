@@ -8,20 +8,27 @@ description:
   <head>
     <title>Guess the Number</title>
     <style>
-      // Define variables for colors
-      $primary-color: #0074D9;
-      $secondary-color: #FF851B;
-      $text-color: #333;
+      /* Define variables for colors */
+      :root {
+        --primary-color: #0074D9;
+        --secondary-color: #FF851B;
+        --text-color: #333;
+      }
       
-      // Use variables to style elements
+      /* Use variables to style elements */
       body {
-        background-color: $secondary-color;
-        color: $text-color;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
         font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; /* Adjust this to your desired height */
       }
       
       h1 {
-        color: $primary-color;
+        color: var(--primary-color);
         font-size: 3rem;
         text-align: center;
         margin-top: 2rem;
@@ -31,18 +38,21 @@ description:
         margin: 1rem 0;
       }
       
-      input[type="text"] {
-        padding: 0.5rem;
-        border: none;
-        border-radius: 0.25rem;
-        font-size: 1.2rem;
+      input[type="text"], button {
         width: 100%;
         max-width: 20rem;
         margin-bottom: 1rem;
       }
       
+      input[type="text"] {
+        padding: 0.5rem;
+        border: none;
+        border-radius: 0.25rem;
+        font-size: 1.2rem;
+      }
+      
       button {
-        background-color: $primary-color;
+        background-color: var(--primary-color);
         color: #fff;
         border: none;
         border-radius: 0.25rem;
@@ -52,7 +62,7 @@ description:
       }
       
       button:hover {
-        background-color: darken($primary-color, 10%);
+        background-color: darken(var(--primary-color), 10%);
       }
       
       #result {
