@@ -4,24 +4,32 @@ layout: default
 description: 
 ---
 
+<!DOCTYPE html>
 <html>
   <head>
     <title>Guess the Number</title>
     <style>
-      // Define variables for colors
-      $primary-color: #0074D9;
-      $secondary-color: #FF851B;
-      $text-color: #333;
+      /* Define variables for colors */
+      :root {
+        --primary-color: #0074D9;
+        --secondary-color: #FF851B;
+        --text-color: #333;
+      }
       
-      // Use variables to style elements
+      /* Use variables to style elements */
       body {
-        background-color: $secondary-color;
-        color: $text-color;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
         font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; /* Adjust this to your desired height */
       }
       
       h1 {
-        color: $primary-color;
+        color: var(--primary-color);
         font-size: 3rem;
         text-align: center;
         margin-top: 2rem;
@@ -29,6 +37,12 @@ description:
       
       p {
         margin: 1rem 0;
+      }
+      
+      input[type="text"], button {
+        width: 100%;
+        max-width: 20rem;
+        margin-bottom: 1rem;
       }
       
       input[type="text"] {
@@ -39,7 +53,7 @@ description:
       }
       
       button {
-        background-color: $primary-color;
+        background-color: var(--primary-color);
         color: #fff;
         border: none;
         border-radius: 0.25rem;
@@ -49,7 +63,7 @@ description:
       }
       
       button:hover {
-        background-color: darken($primary-color, 10%);
+        background-color: darken(var(--primary-color), 10%);
       }
       
       #result {
@@ -58,56 +72,13 @@ description:
         text-align: center;
         margin-top: 2rem;
       }
-      
-      .home-button {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-      }
-      
-      /* SASS code to center the input box and submit button */
-      .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-      }
-      
-      input[type="text"],
-      button {
-        margin-bottom: 1rem;
-      }
-      
-      input[type="text"] {
-        width: 100%;
-        max-width: 20rem;
-      }
-      
-      button {
-        display: block;
-      }
-      
-      form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-      }
     </style>
   </head>
   <body>
-    <a href="https://anicricket.github.io/tmv4/" class="home-button">Home</a>
     <h1>Guess the Number</h1>
     <p>Try to guess the number between 1 and 100.</p>
-    
-    <!-- Add the class "container" to the form element to center the input box and submit button -->
-    <form class="container">
-      <input type="text" id="guess" placeholder="Enter your guess">
-      <button onclick="checkGuess()">Submit</button>
-    </form>
-    
+    <input type="text" id="guess" placeholder="Enter your guess">
+    <button onclick="checkGuess()">Submit</button>
     <p id="result"></p>
 
     <script>
@@ -125,13 +96,12 @@ description:
         // Check if the guess is correct
         if (guess === randomNumber) {
           document.getElementById("result").innerHTML = `Congratulations! You guessed the number in ${attempts} attempts.`;
-        } else if (guess < randomNumber) {document.getElementById("result").innerHTML = "Too low. Guess again.";
+        } else if (guess < randomNumber) {
+          document.getElementById("result").innerHTML = "Too low. Guess again.";
         } else {
-        document.getElementById("result").innerHTML = "Too high. Guess again.";
+          document.getElementById("result").innerHTML = "Too high. Guess again.";
         }
-        }    
-        </script>
-
+      }
+    </script>
   </body>
 </html>
-         
