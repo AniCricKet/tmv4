@@ -21,6 +21,12 @@ description:
       background-color: #f8f9fa;
     }
 
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     h1 {
       font-size: 3rem;
       color: #1abc9c;
