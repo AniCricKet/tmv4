@@ -13,17 +13,6 @@
   
     
         ,"post1": {
-            "title": "Testppost",
-            "content": "",
-            "url": "https://anicricket.github.io/tmv4/2023/04/06/testppost.html",
-            "relUrl": "/2023/04/06/testppost.html",
-            "date": " • Apr 6, 2023"
-        }
-        
-    
-  
-    
-        ,"post2": {
             "title": "Tutorial To SASS Part 2",
             "content": "Right now, we are introducing SASS, and finding a way to switch between different CSS themes with a click of a button on github page. below is intro to css as this helps us review sass . Here&#39;s an example of how you can use Sass to define a set of variables for colors: . // Define some color variables $primary-color: #007bff; $secondary-color: #6c757d; // Use the variables in your styles body { background-color: $secondary-color; } h1 { color: $primary-color; } . Variables are defined in sass with the symbol $. In the code above, the variables $primary-color and $secondary-color are defined. We then use these variables to define the background color of the body element and the color of the h1 element. . Sass also allows you to nest CSS selectors, which can make your code more readable and easier to maintain: . // Nesting selectors nav { ul { list-style: none; margin: 0; padding: 0; li { display: inline-block; a { color: $primary-color; text-decoration: none; padding: 0.5rem; &amp;:hover { background-color: $secondary-color; } } } } } . In the code above, we define the styles for a navigation menu. We use nested selectors to apply styles to the ul, li, and a elements. We also use the &amp; operator to define styles for the a:hover state. . Sass also provides a feature called mixins, which allow you to define a set of styles that can be reused across your codebase, similar to def in python: . // Define a mixin for button styles @mixin button-styles { display: inline-block; padding: 0.5rem; font-size: 1rem; font-weight: bold; text-decoration: none; border-radius: 0.25rem; color: white; background-color: $primary-color; &amp;:hover { background-color: $secondary-color; } } // Use the mixin to style a button button { @include button-styles; } . In the code above, we define a mixin called button-styles that contains a set of styles for a button element. We then use the @include directive to apply the mixin to a button element. These are just a few examples of the many features that Sass provides. It is impossible to get through everything in this lesson, but if you are interested, you can look in w3schools for more information .",
             "url": "https://anicricket.github.io/tmv4/jupyter/2023/03/26/tutorial2.html",
@@ -34,9 +23,9 @@
     
   
     
-        ,"post3": {
+        ,"post2": {
             "title": "Tutorial To SASS Part 1",
-            "content": "Basic UI (User Interface) Properities . Color: Hue, saturation, and brightness for things like background, text, buttons, and more. . Font: Size, weight, style, etc. of the text displayed on the UI. . Layout: This refers to the arrangement/positioning of UI elements such as buttons, images, etc . Icons: Symbols used to represent things in the UI. . Interactivity: Things like clicking, dragging, scrolling, etc. . Accessibility: UI that can be used for people with disabilities, for example, color blindness. . Changing Color of Text/Background Basics . Programming languages: To change the color of text, you will need to know how to write code in a programming language that supports text formatting. Some common programming languages that support this include HTML, CSS, JavaScript, and Python. . Text editors: You will need a text editor to write and edit the code that will change the color of text. Some popular text editors include Notepad++, Sublime Text, and Visual Studio Code. . Color codes: To change the color of text, you will need to know the hexadecimal or RGB color code for the color you want to use. The hexadecimal code is a six-digit code that represents the red, green, and blue values of a color, while the RGB code represents the red, green, and blue values as integers between 0 and 255. . CSS syntax: If you are using CSS to change the color of text, you will need to know the syntax for defining styles for HTML elements. This includes understanding the selector, property, and value syntax used in CSS. . HTML structure: To change the color of text in HTML, you will need to understand the basic structure of an HTML document and how to add styles to individual elements using inline styles or external style sheets. . What is SASS and why is SASS useful for us? . SASS stands for syntactically awesome stylesheets. | SASS is extremely helpful because it lessens the overall complexity of customization that we get with coding directly with CSS | SASS creates a compiler that allows us to write stylesheets with .sass and .scss | . What are the differences between all these . SCSS includes all CSS features + more | CSS is a style language that is used to style and create web pages. While SCSS is a particular type of file for SASS, it used the Ruby language, which assembles the browser&#39;s CSS style sheets. | SCSS contains advanced and modified features. | SCSS is more syntax-oriented than CSS. SCSS uses fewer lines in its code than CSS, which makes coding easier . | What are coding benefits: . SASS has variables that we can use | In many cases, classes are used as name spaces, which means they are duplicated over and over again. We can avoid this by nesting styles inside the parent | They already have some built in functions for us to use | Once your done with the UI, the compiler will take your code and convert it to valid CSS that works | . | . Those were the basics ... next is some practice . Examples of SASS: Can you spot what&#39;s good about it? (try to use these in your hacks) . Example 1: Variables - Nathan . $primary-color: #4286F4; // prefix is the cash symbol with a colon $secondary-color: #F4A142; .header { background-color: $primary-color; color: $secondary-color; } .button { background-color: $secondary-color; color: $primary-color; } . In this example, we define two variables: $primary-color and $secondary-color. We then use these variables in our styles for the .header and .button classes. By using variables, we can easily change the primary and secondary colors throughout our codebase by simply updating the values of the variables. This can be especially useful for maintaining consistency across a website or application. . Example 2: Nested Styling - Aniket . nav { ul { margin: 0; padding: 0; list-style: none; li { display: inline-block; margin: 0 10px; a { color: #333; text-decoration: none; padding: 5px; border-radius: 5px; &amp;:hover { background-color: #333; color: #fff; } } } } } . In this example, we have a navigation menu (nav) with an unordered list (ul) of menu items (li). We use nesting to define the styles for each level of the menu. For example, the li elements are styled to have display: inline-block and a margin of 0 10px. We then nest another level to style the anchor links (a) within the li elements. Note the use of the &amp; symbol to target the parent element. In this case, we use &amp;:hover to define a hover state for the anchor links within the li elements. . Example 3: Changing Format between devices - Nathan . .container { max-width: 960px; margin: 0 auto; .content { padding: 20px; background-color: #f9f9f9; } @media (min-width: 768px) { display: flex; justify-content: space-between; .sidebar { width: 30%; margin-right: 20px; } .content { width: 70%; padding: 40px; } } } . In this example, we have a container element with a maximum width of 960 pixels and centered margin. Within the container, we have a content section with a background color and padding.Using a media query with @media (min-width: 768px) we apply some changes when the viewport width is 768 pixels or wider. In this case, we use the display property to switch to a flex layout, with the content and sidebar elements arranged side by side. We then use specific styles for the .sidebar and .content elements to adjust their width and margins. Using media queries like this can help you create responsive layouts that adjust to different devices and screen sizes, improving the user experience on different devices. .",
+            "content": "Basic UI (User Interface) Properities . Color: Hue, saturation, and brightness for things like background, text, buttons, and more. . Font: Size, weight, style, etc. of the text displayed on the UI. . Layout: This refers to the arrangement/positioning of UI elements such as buttons, images, etc . Icons: Symbols used to represent things in the UI. . Interactivity: Things like clicking, dragging, scrolling, etc. . Accessibility: UI that can be used for people with disabilities, for example, color blindness. . What is SASS and why is SASS useful for us? . SASS stands for syntactically awesome stylesheets. | SASS is extremely helpful because it lessens the overall complexity of customization that we get with coding directly with CSS | SASS creates a compiler that allows us to write stylesheets with .sass and .scss | . What are the differences between all these . SCSS includes all CSS features + more | CSS is a style language that is used to style and create web pages. While SCSS is a particular type of file for SASS, it used the Ruby language, which assembles the browser&#39;s CSS style sheets. | SCSS contains advanced and modified features. | SCSS is more syntax-oriented than CSS. SCSS uses fewer lines in its code than CSS, which makes coding easier . | What are coding benefits: . SASS has variables that we can use | In many cases, classes are used as name spaces, which means they are duplicated over and over again. We can avoid this by nesting styles inside the parent | They already have some built in functions for us to use | Once your done with the UI, the compiler will take your code and convert it to valid CSS that works | . | . Those were the basics ... next is some practice . Examples of SASS: Can you spot what&#39;s good about it? (try to use these in your hacks) . Example 1: Variables - Nathan . $primary-color: #4286F4; // prefix is the cash symbol with a colon $secondary-color: #F4A142; .header { background-color: $primary-color; color: $secondary-color; } .button { background-color: $secondary-color; color: $primary-color; } . In this example, we define two variables: $primary-color and $secondary-color. We then use these variables in our styles for the .header and .button classes. By using variables, we can easily change the primary and secondary colors throughout our codebase by simply updating the values of the variables. This can be especially useful for maintaining consistency across a website or application. . Example 2: Nested Styling - Aniket . nav { ul { margin: 0; padding: 0; list-style: none; li { display: inline-block; margin: 0 10px; a { color: #333; text-decoration: none; padding: 5px; border-radius: 5px; &amp;:hover { background-color: #333; color: #fff; } } } } } . In this example, we have a navigation menu (nav) with an unordered list (ul) of menu items (li). We use nesting to define the styles for each level of the menu. For example, the li elements are styled to have display: inline-block and a margin of 0 10px. We then nest another level to style the anchor links (a) within the li elements. Note the use of the &amp; symbol to target the parent element. In this case, we use &amp;:hover to define a hover state for the anchor links within the li elements. . Example 3: Changing Format between devices - Nathan . .container { max-width: 960px; margin: 0 auto; .content { padding: 20px; background-color: #f9f9f9; } @media (min-width: 768px) { display: flex; justify-content: space-between; .sidebar { width: 30%; margin-right: 20px; } .content { width: 70%; padding: 40px; } } } . In this example, we have a container element with a maximum width of 960 pixels and centered margin. Within the container, we have a content section with a background color and padding.Using a media query with @media (min-width: 768px) we apply some changes when the viewport width is 768 pixels or wider. In this case, we use the display property to switch to a flex layout, with the content and sidebar elements arranged side by side. We then use specific styles for the .sidebar and .content elements to adjust their width and margins. Using media queries like this can help you create responsive layouts that adjust to different devices and screen sizes, improving the user experience on different devices. .",
             "url": "https://anicricket.github.io/tmv4/jupyter/2023/03/26/tutorial1.html",
             "relUrl": "/jupyter/2023/03/26/tutorial1.html",
             "date": " • Mar 26, 2023"
@@ -45,7 +34,7 @@
     
   
     
-        ,"post4": {
+        ,"post3": {
             "title": "Hacks",
             "content": "Students will be given a game and they must &quot;SASS up&quot;/customize the game. Students are required to customize 3 elements of the game (color schemes, pop ups, animations, buttons, sizing, etc.). Any customizations past 3 elements will contribute to their score after 2.7 to the discretion of the grader. Seed will be awarded to student with the best styling components using what they&#39;ve learned from the presentation. . UI Properties . SASS and CSS . Colors/Styling and themes . Layouts . Backend Implementation . Application to hacks -students will now implement what they have learned to style their own blog -students will implement structures into their own UI and showcase their expertise in frontend code .",
             "url": "https://anicricket.github.io/tmv4/jupyter/2023/03/26/studenthacks.html",
@@ -56,7 +45,7 @@
     
   
     
-        ,"post5": {
+        ,"post4": {
             "title": "Guide to creating a JavaScript Game/Application",
             "content": "How can I create my own JavaScript game or app? . There are a few basic steps to successfully create a JavaScript game or application... . Seperate frontend and backend | Create a base layout/theme for frontend, using html/css/sass | Code backend, test/debug using frontend or console/terminal | Enchance game using fancy frontend and additional features | Here is an example of a Minesweeper game created by Jaden . https://raisinbran25.github.io/tonkatonka/minesweeper .",
             "url": "https://anicricket.github.io/tmv4/jupyter/2023/03/26/javascriptgame.html",
@@ -71,31 +60,9 @@
   
 
   
-      ,"page1": {
-          "title": "About",
-          "content": "This site is built with fastpages . Key Links . GitHub Repos: github.com/nighthawkcoders | AWS Deployments: csp.nighthawkcodingsociety.com | Slack: Join Link | 2021-2022 Archives: Fall, Early Winter, Late Winter, Spring | . .",
-          "url": "https://anicricket.github.io/tmv4/about/",
-          "relUrl": "/about/",
-          "date": ""
-      }
-      
-  
 
   
       ,"page2": {
-          "title": "Minesweeper",
-          "content": "Click here to view the leaderboards for this game . enter a username: Check Username choose your number of mines: Enter click here to play!",
-          "url": "https://anicricket.github.io/tmv4/_pages/06_minesweeper.html",
-          "relUrl": "/_pages/06_minesweeper.html",
-          "date": ""
-      }
-      
-  
-
-  
-
-  
-      ,"page4": {
           "title": "",
           "content": "Objectives . . This Conceptual Framework teaches College Boards 5 Big Ideas of AP Computer Science Principles, Python, JavaScript, and Web Site application development together in an integrated fashion. The purpose is to teach College Board requirements while adding languages, tools, frameworks, and methodologies that meet Career Technical Education (CTE) needs. The outcome is preparing the High School student for the AP Test and simultaneously building the skills required for Computer Science internships. . . Blogs .",
           "url": "https://anicricket.github.io/tmv4/",
@@ -106,7 +73,18 @@
   
 
   
-      ,"page5": {
+      ,"page3": {
+          "title": "Minesweeper",
+          "content": "Click here to view the leaderboards for this game . enter a username: Check Username choose your number of mines: Enter click here to play!",
+          "url": "https://anicricket.github.io/tmv4/_pages/minesweeper.html",
+          "relUrl": "/_pages/minesweeper.html",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page4": {
           "title": "Number Guesser",
           "content": "Guess the Number . Guess the Number . Try to guess the number between 1 and 100. . Submit . .",
           "url": "https://anicricket.github.io/tmv4/_pages/numbergueser.html",
@@ -117,7 +95,7 @@
   
 
   
-      ,"page6": {
+      ,"page5": {
           "title": "Number Guesser v1",
           "content": "Guess the Number . Home Guess the Number . Try to guess the number between 1 and 100. . Submit . .",
           "url": "https://anicricket.github.io/tmv4/_pages/numberguesser_v1.html",
@@ -128,7 +106,7 @@
   
 
   
-      ,"page7": {
+      ,"page6": {
           "title": "Number Guesser v2",
           "content": "Guess the Number . Guess the Number . Try to guess the number between 1 and 100. . Submit . .",
           "url": "https://anicricket.github.io/tmv4/_pages/numberguesser_v2.html",
@@ -157,7 +135,7 @@
   
 
   
-      ,"page14": {
+      ,"page13": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://anicricket.github.io/tmv4/robots.txt",
