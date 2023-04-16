@@ -36,9 +36,6 @@ description:
         border: none;
         border-radius: 0.25rem;
         font-size: 1.2rem;
-        width: 100%;
-        max-width: 20rem;
-        margin-bottom: 1rem;
       }
       
       button {
@@ -67,14 +64,50 @@ description:
         top: 1rem;
         right: 1rem;
       }
+      
+      /* SASS code to center the input box and submit button */
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+      
+      input[type="text"],
+      button {
+        margin-bottom: 1rem;
+      }
+      
+      input[type="text"] {
+        width: 100%;
+        max-width: 20rem;
+      }
+      
+      button {
+        display: block;
+      }
+      
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
     </style>
   </head>
   <body>
     <a href="https://anicricket.github.io/tmv4/" class="home-button">Home</a>
     <h1>Guess the Number</h1>
     <p>Try to guess the number between 1 and 100.</p>
-    <input type="text" id="guess" placeholder="Enter your guess">
-    <button onclick="checkGuess()">Submit</button>
+    
+    <!-- Add the class "container" to the form element to center the input box and submit button -->
+    <form class="container">
+      <input type="text" id="guess" placeholder="Enter your guess">
+      <button onclick="checkGuess()">Submit</button>
+    </form>
+    
     <p id="result"></p>
 
     <script>
@@ -92,12 +125,13 @@ description:
         // Check if the guess is correct
         if (guess === randomNumber) {
           document.getElementById("result").innerHTML = `Congratulations! You guessed the number in ${attempts} attempts.`;
-        } else if (guess < randomNumber) {
-          document.getElementById("result").innerHTML = "Too low. Guess again.";
+        } else if (guess < randomNumber) {document.getElementById("result").innerHTML = "Too low. Guess again.";
         } else {
-          document.getElementById("result").innerHTML = "Too high. Guess again.";
+        document.getElementById("result").innerHTML = "Too high. Guess again.";
         }
-      }
-    </script>
+        }    
+        </script>
+
   </body>
 </html>
+         
