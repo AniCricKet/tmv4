@@ -8,17 +8,16 @@ description:
 <head>
   <title>Guess the Number</title>
   <style>
-    // Define font variables
+    
     $font-family: Arial, sans-serif;
     $header-font-size: 3rem;
     $body-font-size: 1.2rem;
     
-    // Define color variables
-$primary-color: #1abc9c;
-$secondary-color: #34495e;
-$success-color: #2ecc71;
-$danger-color: #e74c3c;
-$warning-color: #f39c12;
+    $primary-color: #1abc9c;
+    $secondary-color: #34495e;
+    $success-color: #2ecc71;
+    $danger-color: #e74c3c;
+    $warning-color: #f39c12;
 
     
     // Define border radius variable
