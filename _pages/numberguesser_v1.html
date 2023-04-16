@@ -1,4 +1,3 @@
-<p>&lt;!DOCTYPE html&gt;</p>
 <html>
   <head>
     <title>Guess the Number</title>
@@ -66,9 +65,28 @@
         text-align: center;
         margin-top: 2rem;
       }
+      
+      #home-button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 1rem;
+        padding: 0.5rem 1rem;
+        background-color: var(--primary-color);
+        color: #fff;
+        border: none;
+        border-radius: 0.25rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+      
+      #home-button:hover {
+        background-color: darken(var(--primary-color), 10%);
+      }
     </style>
   </head>
   <body>
+    <button id="home-button" onclick="goHome()">Home</button>
     <h1>Guess the Number</h1>
     <p>Try to guess the number between 1 and 100.</p>
     <input type="text" id="guess" placeholder="Enter your guess" />
@@ -93,9 +111,13 @@
         } else if (guess < randomNumber) {
           document.getElementById("result").innerHTML = "Too low. Guess again.";
         } else {
-          document.getElementById("result").innerHTML = "Too high. Guess again.";
+          document.getElementById("result").innerHTML ="Too high. Guess again.";
         }
-      }
-    </script>
-  </body>
-</html>
+      }  
+      function goHome() {
+    // Redirect to home page
+    window.location.href = "https://anicricket.github.io/tmv4/";
+  }
+</script>
+
+</body></html>
