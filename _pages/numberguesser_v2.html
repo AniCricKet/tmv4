@@ -16,17 +16,29 @@
     
     // Define border radius variable
     $border-radius: 4px;
-    
+
+    // Center the content
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
     // Apply font styles to body and heading
     body {
       font-family: $font-family;
       font-size: $body-font-size;
+      color: $secondary-color;
+      background-color: #f8f9fa;
     }
+
     h1 {
       font-size: $header-font-size;
       color: $primary-color;
+      text-align: center;
     }
-    
+
     // Style the input and button
     input[type="text"], button {
       font-family: $font-family;
@@ -34,16 +46,28 @@
       padding: 8px;
       border-radius: $border-radius;
       border: 1px solid $secondary-color;
+      background-color: #fff;
+      color: $secondary-color;
+
+      &:focus {
+        outline: none;
+        border-color: $primary-color;
+        box-shadow: 0 0 0 2px $primary-color;
+      }
     }
+
     input[type="text"] {
       width: 50%;
+      margin-right: 10px;
     }
+
     button {
       background-color: $primary-color;
       color: #fff;
       border-color: $primary-color;
       cursor: pointer;
       transition: background-color 0.2s ease;
+
       &:hover {
         background-color: darken($primary-color, 10%);
       }
@@ -53,11 +77,13 @@
     #result {
       margin-top: 16px;
       font-size: $body-font-size;
-      color: $secondary-color;
+      text-align: center;
     }
+
     #result.success {
       color: $success-color;
     }
+
     #result.failure {
       color: $danger-color;
     }
@@ -66,8 +92,10 @@
 <body>
   <h1>Guess the Number</h1>
   <p>Try to guess the number between 1 and 100.</p>
-  <input type="text" id="guess" placeholder="Enter your guess" />
-  <button onclick="checkGuess()">Submit</button>
+  <div>
+    <input type="text" id="guess" placeholder="Enter your guess" />
+    <button onclick="checkGuess()">Submit</button>
+  </div>
   <p id="result"></p>
 
   <script>
@@ -88,12 +116,15 @@
         document.getElementById("result").classList.add("success");
       } else if (guess < randomNumber) {
         document.getElementById("result").innerHTML = "Too low. Guess again.";
-        document.getElementById("result").classList.add("failure");
+        document.getElementById("result").classList.remove("success", "failure");
       } else {
         document.getElementById("result").innerHTML = "Too high. Guess again.";
-        document.getElementById("result").classList.add("failure");
+        document.getElementById("result").classList.remove("success", "failure");
       }
-    }
+        // Clear the input field
+  document.getElementById("guess").value = "";
+}
   </script>
 </body>
 </html>
+
