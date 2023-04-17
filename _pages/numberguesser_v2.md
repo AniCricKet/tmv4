@@ -5,134 +5,125 @@ description:
 ---
 
 <html>
-<head>
-  <title>Guess the Number</title>
-  <style>
-    // Define font variables
-    $font-family: Arial, sans-serif;
-    $header-font-size: 3rem;
-    $body-font-size: 1.2rem;
-    
-    // Define color variables
-    $primary-color: #007bff;
-    $secondary-color: #6c757d;
-    $success-color: #28a745;
-    $danger-color: #dc3545;
-    $warning-color: #ffc107;
-    
-    // Define border radius variable
-    $border-radius: 4px;
-
-    // Center the content
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    // Apply font styles to body and heading
-    body {
-      font-family: $font-family;
-      font-size: $body-font-size;
-      color: $secondary-color;
-      background-color: #f8f9fa;
-    }
-
-    h1 {
-      font-size: $header-font-size;
-      color: $primary-color;
-      text-align: center;
-    }
-
-    // Style the input and button
-    input[type="text"], button {
-      font-family: $font-family;
-      font-size: $body-font-size;
-      padding: 8px;
-      border-radius: $border-radius;
-      border: 1px solid $secondary-color;
-      background-color: #fff;
-      color: $secondary-color;
-
-      &:focus {
-        outline: none;
-        border-color: $primary-color;
-        box-shadow: 0 0 0 2px $primary-color;
+  <head>
+    <title>Guess the Number</title>
+    <style>
+      /* Define variables for colors */
+      :root {
+        --primary-color: #f44336;
+        --secondary-color: #ffc107;
+        --text-color: #fff;
       }
-    }
-
-    input[type="text"] {
-      width: 50%;
-      margin-right: 10px;
-    }
-
-    button {
-      background-color: $primary-color;
-      color: #fff;
-      border-color: $primary-color;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-
-      &:hover {
-        background-color: darken($primary-color, 10%);
+      
+      /* Use variables to style elements */
+      body {
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; /* Adjust this to your desired height */
       }
-    }
-    
-    // Style the result text
-    #result {
-      margin-top: 16px;
-      font-size: $body-font-size;
-      text-align: center;
-    }
-
-    #result.success {
-      color: $success-color;
-    }
-
-    #result.failure {
-      color: $danger-color;
-    }
-  </style>
-</head>
-<body>
-  <h1>Guess the Number</h1>
-  <p>Try to guess the number between 1 and 100.</p>
-  <div>
+      
+      h1 {
+        color: var(--secondary-color);
+        font-size: 3rem;
+        text-align: center;
+        margin-top: 2rem;
+      }
+      
+      p {
+        margin: 1rem 0;
+      }
+      
+      input[type="text"], button {
+        width: 100%;
+        max-width: 20rem;
+        margin-bottom: 1rem;
+      }
+      
+      input[type="text"] {
+        padding: 0.5rem;
+        border: none;
+        border-radius: 0.25rem;
+        font-size: 1.2rem;
+      }
+      
+      button {
+        background-color: var(--secondary-color);
+        color: #fff;
+        border: none;
+        border-radius: 0.25rem;
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        background-color: darken(var(--secondary-color), 10%);
+      }
+      
+      #result {
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 2rem;
+      }
+      
+      #home-button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 1rem;
+        padding: 0.5rem 1rem;
+        background-color: var(--secondary-color);
+        color: #fff;
+        border: none;
+        border-radius: 0.25rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+      
+      #home-button:hover {
+        background-color: darken(var(--secondary-color), 10%);
+      }
+    </style>
+  </head>
+  <body>
+    <button id="home-button" onclick="goHome()">Home</button>
+    <h1>Guess the Number</h1>
+    <p>Try to guess the number between 1 and 100.</p>
     <input type="text" id="guess" placeholder="Enter your guess">
     <button onclick="checkGuess()">Submit</button>
-  </div>
-  <p id="result"></p>
+    <p id="result"></p>
 
-  <script>
-    // Generate a random number between 1 and 100
-    const randomNumber = Math.floor(Math.random() * 100) + 1;
-    let attempts = 0;
+    <script>
+      // Generate a random number between 1 and 100
+      const randomNumber = Math.floor(Math.random() * 100) + 1;
+      let attempts = 0;
 
-    function checkGuess() {
-      // Get the user's guess
-      const guess = parseInt(document.getElementById("guess").value);
+      function checkGuess() {
+        // Get the user's guess
+        const guess = parseInt(document.getElementById("guess").value);
 
-      // Increase the number of attempts
-      attempts++;
+        // Increase the number of attempts
+        attempts++;
 
-      // Check if the guess is correct
-      if (guess === randomNumber) {
-        document.getElementById("result").innerHTML = `Congratulations! You guessed the number in ${attempts} attempts.`;
-        document.getElementById("result").classList.add("success");
-      } else if (guess < randomNumber) {
-        document.getElementById("result").innerHTML = "Too low. Guess again.";
-        document.getElementById("result").classList.remove("success", "failure");
-      } else {
-        document.getElementById("result").innerHTML = "Too high. Guess again.";
-        document.getElementById("result").classList.remove("success", "failure");
-      }
-        // Clear the input field
-  document.getElementById("guess").value = "";
-}
-  </script>
+        // Check if the guess is correct
+        if (guess === randomNumber) {
+          document.getElementById("result").innerHTML = `Congratulations! You guessed the number in ${attempts} attempts.`;
+        } else if (guess < randomNumber) {
+          document.getElementById("result").innerHTML = "Too low. Guess again.";
+        } else {
+          document.getElementById("result").innerHTML = "Too high. Guess again.";
+        }
+        }
+  function goHome() {
+    // Redirect to home page
+    window.location.href = "index.html";
+  }
+</script>
 </body>
 </html>
-
-
-       
