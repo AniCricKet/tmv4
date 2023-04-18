@@ -3,7 +3,6 @@ title: Tic-Tac-Toe
 layout: default
 description: 
 ---
-<!DOCTYPE html>
 <html>
 <head>
   <title>Tic Tac Toe</title>
