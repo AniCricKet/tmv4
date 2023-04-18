@@ -125,9 +125,9 @@
   
       ,"page9": {
           "title": "Tic-Tac-Toe",
-          "content": "&lt;!DOCTYPE html&gt; . Tic Tac Toe . Restart .",
-          "url": "https://anicricket.github.io/tmv4/_pages/tictactoe.html",
-          "relUrl": "/_pages/tictactoe.html",
+          "content": "Tic Tac Toe . Restart .",
+          "url": "https://anicricket.github.io/tmv4/_pages/tictactoeplain.html",
+          "relUrl": "/_pages/tictactoeplain.html",
           "date": ""
       }
       
