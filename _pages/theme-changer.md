@@ -1,6 +1,6 @@
 ---
 title: Theme Changer
-layout: default
+layout: base
 ---
 <html>
 <head>
