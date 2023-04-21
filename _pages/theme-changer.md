@@ -2,6 +2,8 @@
 title: Theme Changer
 layout: base
 ---
+# Theme Changer
+you guys can copy this file and change/improve it
 <html>
 <head>
     <meta charset="UTF-8">
