@@ -6,14 +6,20 @@ layout: base
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../assets/css/fastpages-styles.css">
-    <link rel="stylesheet" href="../assets/css/dark-mode1.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode1.css" id="theme-link">
 </head>
-<button id="dark">Dark Mode</button>
-<script>
-    const themeToggle = document.querySelector('#dark');
-    const html = document.querySelector('html');
-    themeToggle.addEventListener('click', () => {
-    html.classList.toggle('dark-mode1');
-    });
-</script>
+<body>
+    <button id="theme-toggle">Toggle Theme</button>
+    <script>
+        const toggleButton = document.querySelector('#theme-toggle');
+        const themeLink = document.querySelector('#theme-link');
+        toggleButton.addEventListener('click', () => {
+            if (themeLink.getAttribute('href') === '../assets/css/fastpages-styles.css') {
+                themeLink.setAttribute('href', '../assets/css/dark-mode1.css');
+            } else {
+                themeLink.setAttribute('href', '../assets/css/fastpages-styles.css');
+            }
+        });
+    </script>
+</body>
 </html>
