@@ -1,9 +1,3 @@
----
-title: Number Guesser v2
-layout: default
-description: 
----
-
 <html>
   <head>
     <title>Guess the Number</title>
