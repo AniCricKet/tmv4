@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://anicricket.github.io/tmv4/jupyter/2023/03/26/hacks.html</loc>
+<lastmod>2023-03-26T00:00:00-05:00</lastmod>
+</url>
+<url>
 <loc>https://anicricket.github.io/tmv4/jupyter/2023/03/26/javascriptgame.html</loc>
 <lastmod>2023-03-26T00:00:00-05:00</lastmod>
 </url>
@@ -17,11 +21,11 @@
 <lastmod>2023-03-26T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://anicricket.github.io/tmv4/zestytesty</loc>
-<lastmod>2023-04-06T00:00:00-05:00</lastmod>
+<loc>https://anicricket.github.io/tmv4/student/2023/04/08/ourplan.html</loc>
+<lastmod>2023-04-08T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://anicricket.github.io/tmv4/student/2023/04/08/ourplan.html</loc>
+<loc>https://anicricket.github.io/tmv4/student/2023/04/08/teamplan.html</loc>
 <lastmod>2023-04-08T00:00:00-05:00</lastmod>
 </url>
 <url>
@@ -40,7 +44,7 @@
 <loc>https://anicricket.github.io/tmv4/_pages/numberguesser_v1.html</loc>
 </url>
 <url>
-<loc>https://anicricket.github.io/tmv4/_pages/numberguesser_v2.html</loc>
+<loc>https://anicricket.github.io/tmv4/_pages/numberguesser_v3.html</loc>
 </url>
 <url>
 <loc>https://anicricket.github.io/tmv4/_pages/theme-changer.html</loc>
