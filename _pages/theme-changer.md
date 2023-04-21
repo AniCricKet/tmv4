@@ -5,8 +5,8 @@ layout: base
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles/fastpages-styles.css">
-    <link rel="stylesheet" href="styles/dark-mode1.css">
+    <link rel="stylesheet" href="../assets/css/fastpages-styles.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode1.css">
 </head>
 <button id="dark">Dark Mode</button>
 <script>
