@@ -1,3 +1,9 @@
+---
+title: Number Guesser v3
+layout: default
+description: 
+---
+
 <html>
 <head>
     <link rel="stylesheet" href="./number/style.css" />
