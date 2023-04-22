@@ -2,6 +2,17 @@
   
     
         "post0": {
+            "title": "WGET this file and complete fully and thoroughly in order to be graded",
+            "content": "What are 5 Basic UI Elements?: . 2. 3. | | | In your own words, explain what SASS does: . What are some benefits to SASS?: . Hacks Part 1 . Add your own element to your own repository to make it unique (0.9) | Hacks Part 2 . Add the style change button to your own github page (0.9) Change the button to your own styles | See if you can let make it change to multiple different styles (we understand that it is hard to create multiple distinct styles so you are only required to make it clear you have at least three different styles at can be changed) | . | Hacks Part 3 .",
+            "url": "https://anicricket.github.io/tmv4/2023/04/22/studentfile.html",
+            "relUrl": "/2023/04/22/studentfile.html",
+            "date": " • Apr 22, 2023"
+        }
+        
+    
+  
+    
+        ,"post1": {
             "title": "P4-Y 4/25 Guide to SASS",
             "content": "Team Lesson Plan . Intro: Introduction to roles and manifesto and what we want students to learn . Part 1: SASS Part 1 - Aniket and Nathan . Part 2: SASS Part 2 - Evan and Max W . Part 3: Building JavaScript Game /Application- Ryan and Jaden . Part 4: Hacks Page - Max T and Kalani . Intro: Introduction to roles, manifesto, etc. . SASS Part 1- Nathan, Aniket . Basic UI Properties and what they mean | SASS Definition/What it is useful for | SASS code segments and how they are good | Demonstration of SASS | . SASS Part 2- Max W, Evan . More SASS Properties | Layouts | Animation/animation code for UI | Hover features for UI | . Building JavaScript Game or Application- Ryan, Jaden . Before vs After Minesweeper Game - how to customize | Building a java script game and what it requires | . Hacks Page - Kalani, Max T . Students must create their own hack (simple app, game, etc using several components from the lesson) | Students must create a new, shareable repo and put their creativity to the test by creating their own application or game using SASS elements | .",
             "url": "https://anicricket.github.io/tmv4/student/2023/04/08/teamplan.html",
@@ -12,7 +23,7 @@
     
   
     
-        ,"post1": {
+        ,"post2": {
             "title": "P4-Y 4/25 Guide to SASS",
             "content": "Team Lesson Plan . Intro: Introduction to roles and manifesto and what we want students to learn . Part 1: SASS Part 1 - Aniket and Nathan . Part 2: SASS Part 2 - Evan and Max W . Part 3: Building JavaScript Game /Application- Ryan and Jaden . Part 4: Hacks Page - Max T and Kalani . Intro: Introduction to roles, manifesto, etc. . SASS Part 1- Nathan, Aniket . Basic UI Properties and what they mean | Color properties | Themes | SASS Definition/What it is useful for | SASS code segments w/ comparison to css | Demonstration of SASS | . SASS Part 2- Max W, Aniket, Evan . More UI Properties | UX | Layouts | Animation/animation code for UI | . Building JavaScript Game or Application- Ryan, Jaden . Before vs After Minesweeper Game - how to customize | Building a java script game and what it requires | . Hacks Page - Kalani, Max T . Students must create their own hack (simple app,game, etc using key components from the lesson) | Make sure the students can wget the file so they can work on it for their hacks | .",
             "url": "https://anicricket.github.io/tmv4/student/2023/04/08/ourplan.html",
@@ -23,7 +34,7 @@
     
   
     
-        ,"post2": {
+        ,"post3": {
             "title": "Tutorial To SASS Part 2",
             "content": "Right now, we are introducing SASS, and finding a way to switch between different CSS themes with a click of a button on github page. below is intro to css as this helps us review sass . Here&#39;s an example of how you can use Sass to define a set of variables for colors: . // Define some color variables $primary-color: #007bff; $secondary-color: #6c757d; // Use the variables in your styles body { background-color: $secondary-color; } h1 { color: $primary-color; } . Variables are defined in sass with the symbol $. In the code above, the variables $primary-color and $secondary-color are defined. We then use these variables to define the background color of the body element and the color of the h1 element. . Sass also allows you to nest CSS selectors, which can make your code more readable and easier to maintain: . // Nesting selectors nav { ul { list-style: none; margin: 0; padding: 0; li { display: inline-block; a { color: $primary-color; text-decoration: none; padding: 0.5rem; &amp;:hover { background-color: $secondary-color; } } } } } . In the code above, we define the styles for a navigation menu. We use nested selectors to apply styles to the ul, li, and a elements. We also use the &amp; operator to define styles for the a:hover state. . Sass also provides a feature called mixins, which allow you to define a set of styles that can be reused across your codebase, similar to def in python: . // Define a mixin for button styles @mixin button-styles { display: inline-block; padding: 0.5rem; font-size: 1rem; font-weight: bold; text-decoration: none; border-radius: 0.25rem; color: white; background-color: $primary-color; &amp;:hover { background-color: $secondary-color; } } // Use the mixin to style a button button { @include button-styles; } . In the code above, we define a mixin called button-styles that contains a set of styles for a button element. We then use the @include directive to apply the mixin to a button element. These are just a few examples of the many features that Sass provides. It is impossible to get through everything in this lesson, but if you are interested, you can look in w3schools for more information .",
             "url": "https://anicricket.github.io/tmv4/jupyter/2023/03/26/tutorial2.html",
@@ -34,7 +45,7 @@
     
   
     
-        ,"post3": {
+        ,"post4": {
             "title": "Tutorial To SASS Part 1",
             "content": "Basic UI (User Interface) Properities . Color: Hue, saturation, and brightness for things like background, text, buttons, and more. . Font: Size, weight, style, etc. of the text displayed on the UI. . Layout: This refers to the arrangement/positioning of UI elements such as buttons, images, etc . Icons: Symbols used to represent things in the UI. . Interactivity: Things like clicking, dragging, scrolling, etc. . Accessibility: UI that can be used for people with disabilities, for example, color blindness. . What is SASS and why is SASS useful for us? . SASS stands for syntactically awesome stylesheets. | SASS is extremely helpful because it lessens the overall complexity of customization that we get with coding directly with CSS | SASS creates a compiler that allows us to write stylesheets with .sass and .scss | . What are the differences between all these . SCSS includes all CSS features + more | CSS is a style language that is used to style and create web pages. While SCSS is a particular type of file for SASS, it used the Ruby language, which assembles the browser&#39;s CSS style sheets. | SCSS contains advanced and modified features. | SCSS is more syntax-oriented than CSS. SCSS uses fewer lines in its code than CSS, which makes coding easier . | What are coding benefits: . SASS has variables that we can use | In many cases, classes are used as name spaces, which means they are duplicated over and over again. We can avoid this by nesting styles inside the parent | They already have some built in functions for us to use | Once your done with the UI, the compiler will take your code and convert it to valid CSS that works | . | . Those were the basics ... next is some practice . Examples of SASS: Can you spot what&#39;s good about it? (try to use these in your hacks) . Example 1: Variables - Nathan . $primary-color: #4286F4; // prefix is the cash symbol with a colon $secondary-color: #F4A142; .header { background-color: $primary-color; color: $secondary-color; } .button { background-color: $secondary-color; color: $primary-color; } . In this example, we define two variables: $primary-color and $secondary-color. We then use these variables in our styles for the .header and .button classes. By using variables, we can easily change the primary and secondary colors throughout our codebase by simply updating the values of the variables. This can be especially useful for maintaining consistency across a website or application. . Example 2: Nested Styling - Aniket . nav { ul { margin: 0; padding: 0; list-style: none; li { display: inline-block; margin: 0 10px; a { color: #333; text-decoration: none; padding: 5px; border-radius: 5px; &amp;:hover { background-color: #333; color: #fff; } } } } } . In this example, we have a navigation menu (nav) with an unordered list (ul) of menu items (li). We use nesting to define the styles for each level of the menu. For example, the li elements are styled to have display: inline-block and a margin of 0 10px. We then nest another level to style the anchor links (a) within the li elements. Note the use of the &amp; symbol to target the parent element. In this case, we use &amp;:hover to define a hover state for the anchor links within the li elements. . Example 3: Changing Format between devices - Nathan . .container { max-width: 960px; margin: 0 auto; .content { padding: 20px; background-color: #f9f9f9; } @media (min-width: 768px) { display: flex; justify-content: space-between; .sidebar { width: 30%; margin-right: 20px; } .content { width: 70%; padding: 40px; } } } . In this example, we have a container element with a maximum width of 960 pixels and centered margin. Within the container, we have a content section with a background color and padding. Using a media query with @media (min-width: 768px) we apply some changes when the viewport width is 768 pixels or wider. In this case, we used the display property to switch to a flex layout, with the content and sidebar elements arranged side by side. We then use specific styles for the .sidebar and .content elements to adjust their width and margins. Using media queries like this can help you create responsive layouts that adjust to different devices and screen sizes, improving the user experience on different devices. .",
             "url": "https://anicricket.github.io/tmv4/jupyter/2023/03/26/tutorial1.html",
@@ -45,7 +56,7 @@
     
   
     
-        ,"post4": {
+        ,"post5": {
             "title": "Hacks",
             "content": "Students will be given a game and they must &quot;SASS up&quot;/customize the game. Students are required to customize 3 elements of the game (color schemes, pop ups, animations, buttons, sizing, etc.). Any customizations past 3 elements will contribute to their score after 2.7 to the discretion of the grader. Seed will be awarded to student with the best styling components using what they&#39;ve learned from the presentation. . UI Properties . SASS and CSS . Colors/Styling and themes . Layouts . Backend Implementation . Application to hacks -students will now implement what they have learned to style their own blog -students will implement structures into their own UI and showcase their expertise in frontend code .",
             "url": "https://anicricket.github.io/tmv4/jupyter/2023/03/26/studenthacks.html",
@@ -56,22 +67,11 @@
     
   
     
-        ,"post5": {
+        ,"post6": {
             "title": "Guide to creating a JavaScript Game/Application",
             "content": "How can I create my own JavaScript game or app? . There are a few basic steps to successfully create a JavaScript game or application... . Seperate frontend and backend | Create a base layout/theme for frontend, using html/css/sass | Code backend, test/debug using frontend or console/terminal | Enchance game using fancy frontend and additional features | Here is an example of a Minesweeper game created by Jaden . https://raisinbran25.github.io/tonkatonka/minesweeper .",
             "url": "https://anicricket.github.io/tmv4/jupyter/2023/03/26/javascriptgame.html",
             "relUrl": "/jupyter/2023/03/26/javascriptgame.html",
-            "date": " • Mar 26, 2023"
-        }
-        
-    
-  
-    
-        ,"post6": {
-            "title": "Hacks",
-            "content": "Students must create their own repository and title it the basic app you are going to create it. Of course, we are purely grading based off design and how you implemented SASS. We are NOT grading based off of how well your app or game functions. Remember, using what we taught you in the lesson is likely to get you more points so don&#39;t forget that. Any customizations past the elements we discussed is likely to contribute to more than a 2.7 to the discretion of the grader. .",
-            "url": "https://anicricket.github.io/tmv4/jupyter/2023/03/26/hacks.html",
-            "relUrl": "/jupyter/2023/03/26/hacks.html",
             "date": " • Mar 26, 2023"
         }
         
