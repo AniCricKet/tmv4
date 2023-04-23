@@ -1,3 +1,9 @@
+<!-- ---
+title: Minesweeper
+layout: default
+description: 
+--- -->
+
 <style>
 .map-container { 
     width: 500px;
@@ -106,16 +112,15 @@
     background-color: #373737;
 }
 </style>
-
 <!--top html-->
-<p><a href="https://raisinbran25.github.io/tonkatonka/minesweeperlb">Click here to view the leaderboards for this game</a></p>
+[Click here to view the leaderboards for this game](https://raisinbran25.github.io/tonkatonka/minesweeperlb)
 <div>
-    enter a username:<input type="text" id="username" value="" />
+    enter a username:<input type="text" id="username" value="">
     <button type="button" onclick="checkuser()">Check Username</button>
 </div>
 
 <div>
-    choose your number of mines:<input type="text" id="button" value="1-20" />
+    choose your number of mines:<input type="text" id="button" value="1-20">
     <button type="button" onclick="enter()">Enter</button>
 </div>
 
@@ -502,4 +507,3 @@ function create_sewer() {
     })
 }
 </script>
-
