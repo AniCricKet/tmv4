@@ -5,8 +5,10 @@ layout: base
 # Theme Changer
 You guys can copy this file and change/improve it here is the [link](https://github.com/AniCricKet/tmv4/blob/master/_pages/theme-changer.md)
 
-
-
+<body>
+    <?php include('../_includes/theme-changer.php'); ?>
+</body>
+<!--
 <html>
 <head>
     <meta charset="UTF-8">
@@ -29,7 +31,7 @@ You guys can copy this file and change/improve it here is the [link](https://git
 </body>
 </html>
 
-<!--
+
 <html>
 <head>
     <meta charset="UTF-8">
