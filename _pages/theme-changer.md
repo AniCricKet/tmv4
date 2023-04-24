@@ -35,7 +35,7 @@ You guys can copy this file and change/improve it here is the [link](https://git
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../assets/css/fastpages-styles.css" id="default-theme-link">
     <link rel="stylesheet" href="../assets/css/dark-mode1.css" id="dark-theme-link">
-    <link rel="stylesheet" href="../assets/css/mort-style.css" id="mort-theme-link">
+    <link rel="stylesheet" href="../assets/css/other-style.css" id="mort-theme-link">
 </head>
 <body>
     <button id="default-theme-toggle">Default Theme</button>
