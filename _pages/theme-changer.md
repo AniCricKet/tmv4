@@ -3,7 +3,7 @@ title: Theme Changer
 layout: base
 ---
 # Theme Changer
-you guys can copy this file and change/improve it here is the [link](https://github.com/AniCricKet/tmv4/blob/master/_pages/theme-changer.md)
+You guys can copy this file and change/improve it here is the [link](https://github.com/AniCricKet/tmv4/blob/master/_pages/theme-changer.md)
 
 
 <!-->
