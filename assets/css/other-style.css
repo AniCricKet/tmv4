@@ -196,3 +196,14 @@ li.dropdown {
  .dropdown:hover .dropdown-content {
    display: block;
  }
+
+ button {
+    background-color: #F0B9C5;
+    font-family: 'Ubuntu';
+    font-weight: bold;
+    font-size: 40px;
+    color: rgb(110, 112, 172);
+    border-radius: 80px;
+    border-width: 4px;
+    width: 800px;
+  }
