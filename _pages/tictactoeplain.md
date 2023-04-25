@@ -1,8 +1,8 @@
----
+<!-- ---
 title: Tic-Tac-Toe
 layout: default
 description: 
----
+--- -->
 <html>
 <head>
   <title>Tic Tac Toe</title>
