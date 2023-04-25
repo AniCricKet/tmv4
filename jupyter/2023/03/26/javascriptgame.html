@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Guide to creating a JavaScript Game/Application | TMV4</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Guide to creating a JavaScript Game/Application" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="TMV4’s SASS Lesson" />
+<meta property="og:description" content="TMV4’s SASS Lesson" />
+<link rel="canonical" href="https://anicricket.github.io/tmv4/jupyter/2023/03/26/javascriptgame.html" />
+<meta property="og:url" content="https://anicricket.github.io/tmv4/jupyter/2023/03/26/javascriptgame.html" />
+<meta property="og:site_name" content="TMV4" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-26T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Guide to creating a JavaScript Game/Application" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-26T00:00:00-05:00","datePublished":"2023-03-26T00:00:00-05:00","description":"TMV4’s SASS Lesson","headline":"Guide to creating a JavaScript Game/Application","mainEntityOfPage":{"@type":"WebPage","@id":"https://anicricket.github.io/tmv4/jupyter/2023/03/26/javascriptgame.html"},"url":"https://anicricket.github.io/tmv4/jupyter/2023/03/26/javascriptgame.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/tmv4/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://anicricket.github.io/tmv4/feed.xml" title="TMV4" /><link rel="shortcut icon" type="image/x-icon" href="/tmv4/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/tmv4/">TMV4</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/tmv4/search/">Search</a><a class="page-link" href="/tmv4/_pages/minesweeper.html">Minesweeper</a><a class="page-link" href="/tmv4/_pages/numbergueser.html">Number Guesser</a><a class="page-link" href="/tmv4/_pages/numberguesser_v1.html">Number Guesser v1</a><a class="page-link" href="/tmv4/_pages/numberguesser_v3.html">Number Guesser v3</a><a class="page-link" href="/tmv4/_pages/theme-changer.html">Theme Changer</a><a class="page-link" href="/tmv4/_pages/tictactoeplain.html">Tic-Tac-Toe</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Guide to creating a JavaScript Game/Application</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-26T00:00:00-05:00" itemprop="datePublished">
+        Mar 26, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+          <a class="category-tags-link" href="/tmv4/categories/ap#jupyter">jupyter</a>
+        
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/anicricket/tmv4/tree/master/_notebooks/2023-03-26-javascriptgame.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/tmv4/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/anicricket/tmv4/master?filepath=_notebooks%2F2023-03-26-javascriptgame.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/tmv4/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/anicricket/tmv4/blob/master/_notebooks/2023-03-26-javascriptgame.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/tmv4/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fanicricket%2Ftmv4%2Fblob%2Fmaster%2F_notebooks%2F2023-03-26-javascriptgame.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/tmv4/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Example-of-how-to-Create-a-game">Example of how to Create a game </a></li>
+<li class="toc-entry toc-h2"><a href="#How-to-use-sass-and-css-to-make-the-game-more-appealing">How to use sass and css to make the game more appealing </a></li>
+<li class="toc-entry toc-h2"><a href="#Hacks-Part-3">Hacks Part 3 </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-03-26-javascriptgame.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There are a few basic steps to successfully create a JavaScript game or application...</p>
+<ol>
+<li>Plan your game: Before you start coding, take some time to plan out your game. Decide on the basic rules, objectives, and mechanics of the game. Determine what elements you will need to create, such as game boards, characters, and obstacles.</li>
+<li>Start coding: Begin by creating the basic game elements, such as the game board and the player character. Use JavaScript to define the game logic and to add interactivity.</li>
+<li>Test and debug: Test your game frequently to ensure that it works correctly.</li>
+<li>Enchance game using fancy frontend and additional features</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Example-of-how-to-Create-a-game">
+<a class="anchor" href="#Example-of-how-to-Create-a-game" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example of how to Create a game<a class="anchor-link" href="#Example-of-how-to-Create-a-game"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="n">Guess</span> <span class="n">the</span> <span class="n">Number</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">Guess</span> <span class="n">the</span> <span class="n">Number</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">Try</span> <span class="n">to</span> <span class="n">guess</span> <span class="n">the</span> <span class="n">number</span> <span class="n">between</span> <span class="mi">1</span> <span class="ow">and</span> <span class="mf">100.</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"text"</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"guess"</span> <span class="n">placeholder</span><span class="o">=</span><span class="s2">"Enter your guess"</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">button</span> <span class="n">onclick</span><span class="o">=</span><span class="s2">"checkGuess()"</span><span class="o">&gt;</span><span class="n">Submit</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">p</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"result"</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+
+  <span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+    <span class="o">//</span> <span class="n">Generate</span> <span class="n">a</span> <span class="n">random</span> <span class="n">number</span> <span class="n">between</span> <span class="mi">1</span> <span class="ow">and</span> <span class="mi">100</span>
+    <span class="n">const</span> <span class="n">randomNumber</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">Math</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">let</span> <span class="n">attempts</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="n">function</span> <span class="n">checkGuess</span><span class="p">()</span> <span class="p">{</span>
+      <span class="o">//</span> <span class="n">Get</span> <span class="n">the</span> <span class="n">user</span><span class="s1">'s guess</span>
+      <span class="n">const</span> <span class="n">guess</span> <span class="o">=</span> <span class="n">parseInt</span><span class="p">(</span><span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"guess"</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">);</span>
+
+      <span class="o">//</span> <span class="n">Increase</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">attempts</span>
+      <span class="n">attempts</span><span class="o">++</span><span class="p">;</span>
+
+      <span class="o">//</span> <span class="n">Check</span> <span class="k">if</span> <span class="n">the</span> <span class="n">guess</span> <span class="ow">is</span> <span class="n">correct</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">guess</span> <span class="o">===</span> <span class="n">randomNumber</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"result"</span><span class="p">)</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="err">`</span><span class="n">Congratulations</span><span class="err">!</span> <span class="n">You</span> <span class="n">guessed</span> <span class="n">the</span> <span class="n">number</span> <span class="ow">in</span> <span class="err">$</span><span class="p">{</span><span class="n">attempts</span><span class="p">}</span> <span class="n">attempts</span><span class="o">.</span><span class="err">`</span><span class="p">;</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">guess</span> <span class="o">&lt;</span> <span class="n">randomNumber</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"result"</span><span class="p">)</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="s2">"Too low. Guess again."</span><span class="p">;</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"result"</span><span class="p">)</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="s2">"Too high. Guess again."</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">html</span><span class="o">&gt;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This code is a simple HTML and JavaScript program that creates a number guessing game. Here is how it works:</p>
+<ol>
+<li>
+<p>HTML: The HTML code defines a title, a heading, a piece of text describing the game, an input field for the user to enter their guess, a submit button, and a another piece of text where the result of the guess will be displayed.</p>
+</li>
+<li>
+<p>JavaScript: The JavaScript code starts by generating a random number between 1 and 100 using the Math.random() method. It multiplies the result of Math.random() by 100 to get a number between 0 and 99, then adds 1 to the result to get a number between 1 and 100. This random number is stored in the randomNumber variable.</p>
+</li>
+<li>
+<p>JavaScript: The checkGuess() function is called when the user clicks the "Submit" button. It gets the value of the guess entered by the user using document.getElementById("guess").value and converts it to an integer using parseInt(). The number of attempts is also increased by 1.</p>
+</li>
+<li>
+<p>JavaScript: The function then checks if the guess is correct by comparing it to the randomNumber variable. If the guess is correct, a message is displayed in the result paragraph using the innerHTML property. If the guess is too low, a message is displayed asking the user to guess again. If the guess is too high, another message is displayed asking the user to guess again.</p>
+</li>
+</ol>
+<p>The program will continue to prompt the user to guess until they get the correct number. The number of attempts will be displayed when the user correctly guesses the number.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="How-to-use-sass-and-css-to-make-the-game-more-appealing">
+<a class="anchor" href="#How-to-use-sass-and-css-to-make-the-game-more-appealing" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use sass and css to make the game more appealing<a class="anchor-link" href="#How-to-use-sass-and-css-to-make-the-game-more-appealing"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>how to connect sass/css to html/md:</li>
+</ol>
+<ul>
+<li> stores metadata, css* file&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">"stylesheet"</span> <span class="n">href</span><span class="o">=</span><span class="s2">"./style.css"</span><span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="err">!</span><span class="o">--</span><span class="ow">or</span><span class="o">...--&gt;</span>
+<span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">"stylesheet"</span> <span class="n">href</span><span class="o">=</span><span class="s2">".path/style.css"</span><span class="o">/&gt;</span>
+<span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>colors</li>
+</ol>
+<ul>
+<li>try using a color scheme for consistent theme</li>
+<li>demonstrates use of variables</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>dynamics</li>
+</ol>
+<ul>
+<li>buttons run functions, but can also change css</li>
+<li>hover</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hacks-Part-3">
+<a class="anchor" href="#Hacks-Part-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks Part 3<a class="anchor-link" href="#Hacks-Part-3"> </a>
+</h2>
+<p>Add sass to the game provided(0.9) or create your own javascript game and add sass to it(0.9+)</p>
+<p>best game gets seed points</p>
+
+</div>
+</div>
+</div>
+&lt;/div&gt;
+ 
+
+</li>
+</ul>
+</div>
+</div></div>
+</div>
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="anicricket/tmv4"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/tmv4/jupyter/2023/03/26/javascriptgame.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/tmv4/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://anicricket.github.io/tmv4/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/tmv4/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>TMV4&#39;s SASS Lesson</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
