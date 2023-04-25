@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Tutorial To SASS Part 1 | TMV4</title>
+<title>Intro To SASS Part 1 | TMV4</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Tutorial To SASS Part 1" />
+<meta property="og:title" content="Intro To SASS Part 1" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="TMV4’s SASS Lesson" />
 <meta property="og:description" content="TMV4’s SASS Lesson" />
@@ -16,9 +16,9 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-03-26T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Tutorial To SASS Part 1" />
+<meta property="twitter:title" content="Intro To SASS Part 1" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-26T00:00:00-05:00","datePublished":"2023-03-26T00:00:00-05:00","description":"TMV4’s SASS Lesson","headline":"Tutorial To SASS Part 1","mainEntityOfPage":{"@type":"WebPage","@id":"https://anicricket.github.io/tmv4/jupyter/2023/03/26/tutorial1.html"},"url":"https://anicricket.github.io/tmv4/jupyter/2023/03/26/tutorial1.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-26T00:00:00-05:00","datePublished":"2023-03-26T00:00:00-05:00","description":"TMV4’s SASS Lesson","headline":"Intro To SASS Part 1","mainEntityOfPage":{"@type":"WebPage","@id":"https://anicricket.github.io/tmv4/jupyter/2023/03/26/tutorial1.html"},"url":"https://anicricket.github.io/tmv4/jupyter/2023/03/26/tutorial1.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/tmv4/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://anicricket.github.io/tmv4/feed.xml" title="TMV4" /><link rel="shortcut icon" type="image/x-icon" href="/tmv4/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,13 +73,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Tutorial To SASS Part 1</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-26T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Intro To SASS Part 1</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-26T00:00:00-05:00" itemprop="datePublished">
         Mar 26, 2023
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      5 min read
     
 </span></p>
 
@@ -128,11 +128,12 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#Basic-UI-(User-Interface)-Properities">Basic UI (User Interface) Properities </a></li>
 <li class="toc-entry toc-h1"><a href="#What-is-SASS-and-why-is-SASS-useful-for-us?">What is SASS and why is SASS useful for us? </a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#Examples-of-SASS:-Can-you-spot-what's-good-about-it?-(try-to-use-these-in-your-hacks)">Examples of SASS: Can you spot what&#39;s good about it? (try to use these in your hacks) </a>
+<li class="toc-entry toc-h2"><a href="#Examples-of-SASS:-Can-you-spot-what's-good-about-it?">Examples of SASS: Can you spot what&#39;s good about it? </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Example-1:-Variables---Nathan">Example 1: Variables - Nathan </a></li>
 <li class="toc-entry toc-h3"><a href="#Example-2:-Nested-Styling---Aniket">Example 2: Nested Styling - Aniket </a></li>
 <li class="toc-entry toc-h3"><a href="#Example-3:-Changing-Format-between-devices---Nathan">Example 3: Changing Format between devices - Nathan </a></li>
+<li class="toc-entry toc-h3"><a href="#Steps-To-Use-SASS-In-YOUR-Fastpages">Steps To Use SASS In YOUR Fastpages </a></li>
 </ul>
 </li>
 </ul>
@@ -158,6 +159,7 @@ window.onload = wrap_img;
 <p>Icons: Symbols used to represent things in the UI.</p>
 <p>Interactivity: Things like clicking, dragging, scrolling, etc.</p>
 <p>Accessibility: UI that can be used for people with disabilities, for example, color blindness.</p>
+<p>SASS will help us perform these properties at the max...</p>
 
 </div>
 </div>
@@ -180,7 +182,7 @@ window.onload = wrap_img;
 <li>CSS is a style language that is used to style and create web pages. While SCSS is a particular type of file for SASS, it used the Ruby language, which assembles the browser's CSS style sheets.</li>
 <li>SCSS contains advanced and modified features.</li>
 <li>
-<p>SCSS is more syntax-oriented than CSS. SCSS uses fewer lines in its code than CSS, which makes coding easier</p>
+<p>SCSS is more syntax-oriented than CSS. SCSS uses fewer lines in its code than CSS, which makes programming easier</p>
 </li>
 <li>
 <p>What are coding benefits:</p>
@@ -191,8 +193,14 @@ window.onload = wrap_img;
 <li>Once your done with the UI, the compiler will take your code and convert it to valid CSS that works</li>
 </ul>
 </li>
+<li>
+<p>What are coding drawbacks:</p>
+<ul>
+<li>The browser can't read SASS, only CSS. As a result, you must have the "Live Sass Complier" extension installed. This extension will convert SASS to CSS. </li>
 </ul>
-<p>Those were the basics ... next is some practice</p>
+</li>
+</ul>
+<p>Those were the basics ... next is some examples</p>
 
 </div>
 </div>
@@ -200,8 +208,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Examples-of-SASS:-Can-you-spot-what's-good-about-it?-(try-to-use-these-in-your-hacks)">
-<a class="anchor" href="#Examples-of-SASS:-Can-you-spot-what's-good-about-it?-(try-to-use-these-in-your-hacks)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples of SASS: Can you spot what's good about it? (try to use these in your hacks)<a class="anchor-link" href="#Examples-of-SASS:-Can-you-spot-what's-good-about-it?-(try-to-use-these-in-your-hacks)"> </a>
+<h2 id="Examples-of-SASS:-Can-you-spot-what's-good-about-it?">
+<a class="anchor" href="#Examples-of-SASS:-Can-you-spot-what's-good-about-it?" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples of SASS: Can you spot what's good about it?<a class="anchor-link" href="#Examples-of-SASS:-Can-you-spot-what's-good-about-it?"> </a>
 </h2>
 </div>
 </div>
@@ -297,7 +305,40 @@ window.onload = wrap_img;
   <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-<p>In this example, we have a container element with a maximum width of 960 pixels and centered margin. Within the container, we have a content section with a background color and padding. Using a media query with @media (min-width: 768px) we apply some changes when the viewport width is 768 pixels or wider. In this case, we used the display property to switch to a flex layout, with the content and sidebar elements arranged side by side. We then use specific styles for the .sidebar and .content elements to adjust their width and margins. Using media queries like this can help you create responsive layouts that adjust to different devices and screen sizes, improving the user experience on different devices.</p>
+<p>In this example, we have a container element with a maximum width of 960 pixels and centered margin. Within the container, we have a content section with a background color and padding. Using a media query with @media (min-width: 768px) we apply some changes when the viewport width is 768 pixels or wider. In this case, we use the display property to switch to a flex layout, with the content and sidebar elements arranged side by side. We then use specific styles for the .sidebar and .content elements to adjust their width and margins. Using media queries like this can help you create responsive layouts that adjust to different devices and screen sizes, improving the user experience on different devices.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Steps-To-Use-SASS-In-YOUR-Fastpages">
+<a class="anchor" href="#Steps-To-Use-SASS-In-YOUR-Fastpages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steps To Use SASS In YOUR Fastpages<a class="anchor-link" href="#Steps-To-Use-SASS-In-YOUR-Fastpages"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>
+<p>Install the Sass Live compiler on your machine (most of you probably already do)</p>
+</li>
+<li>
+<p>Once Sass is installed, you can create Sass files (.scss or .sass) in your Fastpages repository. You can create separate Sass files for different parts of your website, such as layout, typography, colors, etc.</p>
+</li>
+<li>
+<p>Write Sass code: Write your CSS styles using Sass syntax in your Sass files. Sass will compile your Sass code into standard CSS code that can be understood by web browsers.</p>
+</li>
+<li>
+<p>Compile Sass to CSS: Compile Sass files into CSS using the Sass compiler. The Sass compiler will generate CSS files from your Sass code, which you can then use in your Fastpages project. You can configure the Sass compiler to output the compiled CSS files to a specific directory, such as _sass or assets/css, so that they can be easily included in your Fastpages site.</p>
+</li>
+<li>
+<p>Include compiled CSS in your Fastpages: Once you have compiled your Sass files into CSS, you can include the compiled CSS files in your Fastpages project. You can do this by linking to the CSS files in your Jekyll layout or template files, or by including the CSS files directly in your Markdown blog posts using HTML or Markdown syntax.</p>
+</li>
+</ol>
 
 </div>
 </div>
