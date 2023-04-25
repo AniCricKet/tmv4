@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      3 min read
     
 </span></p>
 
@@ -222,7 +222,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="c1">// Next, you can apply the animation to an element in your CSS using the animation property. You can specify the name of the keyframes, the duration of the animation, and other animation-related properties. This applies the fade-in animation to an element with the class .my-element and specifies the animation duration, timing function, delay, iteration count, direction, and fill mode.</span>
+<div class="highlight"><pre><span></span><span class="c1">// Next, you can apply the animation to an element in your CSS using the animation property. You can specify the name of the keyframes, the duration of the animation, and other animation-related properties.</span>
 
 <span class="nc">.my-element</span> <span class="p">{</span>
   <span class="nt">animation-name</span><span class="nd">:</span> <span class="nt">fade-in</span><span class="o">;</span>
@@ -244,11 +244,11 @@ window.onload = wrap_img;
 <h1 id="Here-is-an-example-of-creating-a-Grid-Layout">
 <a class="anchor" href="#Here-is-an-example-of-creating-a-Grid-Layout" aria-hidden="true"><span class="octicon octicon-link"></span></a>Here is an example of creating a Grid Layout<a class="anchor-link" href="#Here-is-an-example-of-creating-a-Grid-Layout"> </a>
 </h1>
-<div class="highlight"><pre><span></span><span class="c1">// This defines a 3x3 grid with three equal-sized columns and three equal-sized rows using the repeat() function with 1fr unit, which represents a fraction of the available space.</span>
+<div class="highlight"><pre><span></span><span class="c1">// This defines a 3x3 grid </span>
 <span class="nv">$grid-template-columns</span><span class="o">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">1</span><span class="kt">fr</span><span class="p">);</span>
 <span class="nv">$grid-template-rows</span><span class="o">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">1</span><span class="kt">fr</span><span class="p">);</span>
 
-<span class="c1">// Next, create a class for your grid container element in your Sass file and apply the grid properties using the Sass variables you defined earlier. This creates a grid container with the display: grid property and sets the grid-template-columns, grid-template-rows, and gap properties using the Sass variables you defined earlier. The gap property adds spacing between the grid items.</span>
+<span class="c1">// create a class for your grid container element in your Sass file and apply the grid properties using the Sass variables defined earlier. This creates a grid container with the display</span>
 <span class="nc">.grid-container</span> <span class="p">{</span>
   <span class="nt">display</span><span class="nd">:</span> <span class="nt">grid</span><span class="o">;</span>
   <span class="nt">grid-template-columns</span><span class="nd">:</span> <span class="err">$</span><span class="nt">grid-template-columns</span><span class="o">;</span>
@@ -256,7 +256,7 @@ window.onload = wrap_img;
   <span class="nt">gap</span><span class="nd">:</span> <span class="nt">1rem</span><span class="o">;</span> <span class="o">//</span> <span class="nt">Add</span> <span class="nt">gap</span> <span class="nt">between</span> <span class="nt">grid</span> <span class="nt">items</span>
 <span class="p">}</span>
 
-<span class="c1">// Create classes for your grid item elements in your Sass file and specify their position within the grid using the grid-column and grid-row properties. This specifies the position of each grid item within the grid container using the grid-column and grid-row properties. The span value specifies the number of columns or rows the item should span.</span>
+<span class="c1">// positioning</span>
 <span class="nc">.grid-item-1</span> <span class="p">{</span>
   <span class="nt">grid-column</span><span class="nd">:</span> <span class="nt">1</span> <span class="o">/</span> <span class="nt">span</span> <span class="nt">1</span><span class="o">;</span> <span class="o">//</span> <span class="nt">Place</span> <span class="nt">in</span> <span class="nt">column</span> <span class="nt">1</span><span class="o">,</span> <span class="nt">span</span> <span class="nt">1</span> <span class="nt">column</span>
   <span class="nt">grid-row</span><span class="nd">:</span> <span class="nt">1</span> <span class="o">/</span> <span class="nt">span</span> <span class="nt">1</span><span class="o">;</span> <span class="o">//</span> <span class="nt">Place</span> <span class="nt">in</span> <span class="nt">row</span> <span class="nt">1</span><span class="o">,</span> <span class="nt">span</span> <span class="nt">1</span> <span class="nt">row</span>
