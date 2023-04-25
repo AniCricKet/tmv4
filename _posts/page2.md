@@ -1,7 +1,4 @@
 <html>
-    <head>
-    <link rel="stylesheet" href="page2.css">
-    </head>
     <body>
 <section class="">
 <!--Description of what customization 2 might be like and the topics that will be covered-->
