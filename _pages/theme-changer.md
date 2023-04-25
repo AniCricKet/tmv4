@@ -8,6 +8,13 @@ You guys can copy this file and change/improve it here is the [link](https://git
 
 
 <html>
+<body>
+    <?php
+        include("../_includes/theme-changer.php")
+    ?>
+</body>
+</html>
+<!--
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../assets/css/fastpages-styles.css">
@@ -28,8 +35,6 @@ You guys can copy this file and change/improve it here is the [link](https://git
     </script>
 </body>
 </html>
-
-<!--
 <html>
 <head>
     <meta charset="UTF-8">
