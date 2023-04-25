@@ -1,3 +1,9 @@
+<!-- ---
+title: Number Guesser v1
+layout: default
+description: 
+--- -->
+
 <html>
   <head>
     <title>Guess the Number</title>
@@ -89,7 +95,7 @@
     <button id="home-button" onclick="goHome()">Home</button>
     <h1>Guess the Number</h1>
     <p>Try to guess the number between 1 and 100.</p>
-    <input type="text" id="guess" placeholder="Enter your guess" />
+    <input type="text" id="guess" placeholder="Enter your guess">
     <button onclick="checkGuess()">Submit</button>
     <p id="result"></p>
 
@@ -120,4 +126,3 @@
   }
 </script>
 
-</body></html>
