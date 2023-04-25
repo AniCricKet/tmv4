@@ -1,8 +1,8 @@
-<!-- ---
+---
 title: Minesweeper
 layout: default
 description: 
---- -->
+---
 
 <style>
 .map-container { 

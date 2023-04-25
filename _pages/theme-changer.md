@@ -6,7 +6,7 @@ layout: base
 You guys can copy this file and change/improve it here is the [link](https://github.com/AniCricKet/tmv4/blob/master/_pages/theme-changer.md)
 
 
-<!--
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -28,8 +28,8 @@ You guys can copy this file and change/improve it here is the [link](https://git
     </script>
 </body>
 </html>
--->
 
+<!--
 <html>
 <head>
     <meta charset="UTF-8">
@@ -66,3 +66,4 @@ You guys can copy this file and change/improve it here is the [link](https://git
     </script>
 </body>
 </html>
+-->
